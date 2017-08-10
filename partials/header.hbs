@@ -7,10 +7,20 @@
 {{!-- Logo --}}
 <a href='{{@blog.url}}' class='header__logo'></a>
 
+{{!-- Icon Search --}}
+<a href="#" class="header__ico-search">
+    <i class="header__icon icon-search"></i>
+</a>
+
 {{!-- Icon Menu --}}
-<a href='#', class='header__ico-menu' id='open-menu'>
+<a href='#' class='header__ico-menu' id='open-menu'>
     <i class='header__icon icon-menu'></i>
 </a>
+
+{{!-- Search (view) --}}
+<div class='search-block' id='search-block'>
+    {{> 'search-block' }}
+</div>
 
 {{!-- Menu (navigation) --}}
 <div class='menu' id='menu'>
