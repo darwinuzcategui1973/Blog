@@ -77,7 +77,21 @@
 
     <script type="text/javascript">
         $("#search-field").ghostHunter({
-            results   : "#results",
+            results         : "#results",
+            onKeyUp         : true,
+            zeroResultsInfo : false,
+            onComplete      : function(results) {
+
+                const resultsLength = results.length;
+
+                for(var i = 0; i < resultsLength; i++){
+
+                    if(results[i].title.length > 50){
+                        console.log(results[i].title.substring(0, 51));
+                    }
+                }
+
+            }
         });
     </script>
 

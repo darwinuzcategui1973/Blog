@@ -1,5 +1,5 @@
 .search-block
-    background-color rgba($color-dark, 0.8)
+    background linear-gradient($color-blue 3%, $color-white 50%)
     position absolute
     top 0
     left 0
@@ -10,24 +10,73 @@
     box-sizing border-box
     text-align left
 
-    .search-block__form
+.search-block__form
+    .search-block__input-container
+        position relative
+
         .search-block__input
             width 100%
-            padding 0.6rem 0.7rem
+            padding 0.7rem 2rem 0.7rem 0.8rem
             border-radius 4px
             box-sizing border-box
-            background rgba($color-dark,0.6)
-            border 1px solid $color-white
-            color $color-white
+            background-color $color-white
+            box-shadow 3px 3px 8px rgba($color-dark, 0.8)
+            color $color-dark
             font-weight 300
             margin-right 0.5rem
 
         .search-block__input::placeholder
-            color $color-white
+            color $color-dark
 
         .search-block__close
-            color $color-white
+            color $color-dark
             font-size 1.5rem
             display inline-block
             vertical-align top
             margin-top 0.4rem
+            position absolute
+            top 0
+            right 0.5rem
+
+.results
+    padding 1rem 0
+    
+.search-block__result
+    display inline-block
+    width 100%
+    border 1px solid $color-gray-C
+    border-radius 4px
+    margin-bottom 0.5rem
+    color $color-dark
+    background-color $color-white
+
+    .search-block__icon-container
+        width 50px
+        height 50px
+        background-color $color-red
+        display inline-block
+        border-radius 3px 0 0 3px
+        vertical-align top
+        position relative
+
+        .search-block__icon
+            font-size 1.7rem
+            width 1.7rem
+            height 1.7rem
+            color $color-white
+            position absolute
+            top 0
+            left 0
+            right 0
+            bottom 0
+            margin auto
+
+    .search-block__title
+        display inline-block
+        border-radius 0 3px 3px 0
+        width calc(100% - 50px)
+        padding 0.3rem 0.3rem 0.3rem 0.5rem
+        box-sizing border-box
+
+        .search-block__text
+            font-weight 300
